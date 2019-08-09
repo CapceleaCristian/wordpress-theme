@@ -1,0 +1,54 @@
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+/* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .nav-topmenu, .nav-shopbag {
+    display: none;
+  }
+}
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+@media (min-width: 481px) and (max-width: 767px) {
+  .nav-topmenu, .nav-shopbag {
+    display: none;
+  }
+  .main-intro .main-inner h1.main-text {
+    font-size: 40px !important;
+  }
+  .main-intro .main-inner p.main-description {
+    font-size: 18px !important;
+  }
+  .main-btn {
+    margin: 0 auto;
+  }
+  .main-btn a.contact-btn {
+    padding: 10px 25px !important;
+    font-size: 16px;
+  }
+  .main-btn a.read-btn {
+    padding: 10px 25px !important;
+    font-size: 16px;
+  }
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+/*# sourceMappingURL=media.css.map */

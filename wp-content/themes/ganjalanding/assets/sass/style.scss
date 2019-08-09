@@ -1,0 +1,947 @@
+// My global setup styles
+// background: linear-gradient(30deg, #FFC0CB 50%, #00FFFF 50%);
+// color variables***********************
+$white: #fff;
+$extralightgrey1: #f7f8fa;
+$extralightgrey2: #fdfdfd;
+$bordergrey1: #dedfe1;
+$bordergrey2: #d9d9d9;
+$lightgrey: #a8a8a8;
+$normalgrey: #9e9e9e;
+$darkgrey: #898989;
+$yellow: #ffc400;
+$primary-green: #13a0b2;
+$darkblue: #282f39;
+$primary-black: #323232;
+
+.nopadding{
+    padding: 0;
+    margin: 0;
+}
+*:focus {
+    outline: none;
+}
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+// end of color variables****************
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+ul, li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+p{
+    padding: 0;
+    margin: 0;
+}
+a:hover{
+    text-decoration: none;
+}
+.container{
+    max-width: 1170px;
+}
+// End of my styles
+
+// start of modal pop up
+//* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    z-index: 99;
+}
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    margin-top: 300px;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 10px solid $lightgrey;
+    border-radius: 10px;
+    width: 40%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  /* The Close Button */
+  .close {
+    color: $white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 15px 16px;
+    background-color: $primary-green;
+    color: $white;
+        h3{
+            padding: 0 10px;
+            font-weight: bold;
+            color: $white;
+        }
+  }
+  
+  .modal-body {
+    padding: 30px 30px 65px;
+        h3{
+            font-weight: bold;
+            color: $primary-green;
+            margin-bottom: 20px;
+        }
+    }
+// end of modal pop up
+// start of modal form
+
+.custom-search{
+    padding: 0 10px;
+    height: 45px;
+    width: 88%;
+    border: 3px solid $primary-green;
+    margin-right: 5px;
+}
+
+.custom-submit{
+    height: 45px;
+    background-color: $white;
+    border: 3px solid $lightgrey;
+    transition: all 0.5s ease-in-out;
+}
+.custom-submit:hover{
+    border-color: $primary-green;
+}
+
+// end of modal form
+// start of navbar section
+.nav-bar{
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    background-color: $lightgrey;
+    min-height: 70px;
+    z-index: 1;
+    -webkit-box-shadow: 0px 4px 43px -30px rgba(135,135,135,0.75);
+    -moz-box-shadow: 0px 4px 43px -30px rgba(135,135,135,0.75);
+    box-shadow: 0px 4px 43px -30px rgba(135,135,135,0.75);
+    border-bottom: 5px solid $normalgrey;
+    .nav-logo{
+        margin: 18px 0;
+        a{
+            font-size: 35px;
+            letter-spacing: 1px;
+            line-height: 25px;
+            color: $primary-green;
+            font-weight: 700;
+        }
+        a:hover span{
+            color: $primary-green;
+        }
+        span{
+            color: $white;
+            transition: all 0.5s ease-in-out;
+        }
+    }
+    .nav-topmenu{
+        margin: 20px 0;
+        float: right;
+        ul{
+            li{
+                display: inline-block;
+            }
+            a{
+                font-size: 16px;
+                line-height: 26px;
+                color: $white;
+                font-family: "Lato";
+                font-weight: 700;
+                margin: 0 15px;
+                transition: all 0.5s ease-in-out;
+                }
+            a:hover{
+                color: $primary-green;
+                }
+            }
+        }
+        
+    .nav-shopbag{
+    position: relative;
+    margin: 22px 0;
+        a.search-btn{
+            cursor: pointer;
+            position: absolute;
+            color: $white;
+            transition: all 0.5s ease-in-out;
+        }
+        a.search-btn:hover {
+            color: $primary-green;
+        }
+        a.shop-btn{
+            position: absolute;
+            top: 3px;
+            right: 15px;
+            color: $white;
+            transition: all 0.5s ease-in-out;
+        }
+        a.shop-btn:hover {
+            color: $primary-green;
+        }
+        p.shop-count{
+            position: absolute;
+            top: -10px;
+            right: 0;
+            color: $primary-green;
+            font-size: 12px;
+            line-height: 26px;
+            font-weight: 700;
+            
+        }
+    }
+}
+
+// end of navbar section
+.main-intro-all{
+    background-color: #000;
+}
+.main-intro{
+    padding-top: 30px;
+    .main-inner{
+        max-width: 610px;
+        padding: 190px 0 180px;
+        h1.main-text{
+            font-size: 60px;
+            line-height: 68px;
+            color: $white;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-transform: capitalize;
+        }
+        p.main-description{
+            font-size: 22px;
+            line-height: 35px;
+            color: $white;
+            margin-bottom: 60px;
+        }
+        .main-btn{
+            .contact-btn{
+                padding: 15px 40px;
+                border: 1px solid transparent;
+                border-radius: 5px;
+                font-size: 18px;
+                line-height: 20px;
+                color: $white;
+                font-family: "Lato";
+                font-weight: 600;
+                margin-right: 30px;
+                transition: all 0.5s ease-in-out;
+            }
+            .read-btn{
+                padding: 15px 40px;
+                border: 1px solid transparent;
+                background-color: $primary-green;
+                border-radius: 5px;
+                font-size: 18px;
+                line-height: 20px;
+                color: $white;
+                font-family: "Lato";
+                font-weight: 600;
+                transition: all 0.5s ease-in-out;
+
+            }
+            .contact-btn:hover, .read-btn:hover{
+                color: $primary-green;
+                background-color: $white;
+            }
+        }
+    }
+}
+// start of header main
+// end of header main
+// start of text choose us section
+.choose-us{
+    background-color: $white;
+    padding: 125px 0;
+    .choose-carts{
+        .choose-cart{
+        display: flex;
+            .cart-img{
+                margin-right: 15px;
+            }
+            h3.cart-title{
+                text-transform: capitalize;
+                font-size: 24px;
+                color: $primary-black;
+                font-weight: 600;
+            }
+            p.cart-short{
+                text-transform: uppercase;
+                font-size: 14px;
+                color: $darkgrey;
+                font-family: "Lato";
+                font-weight: 400;
+            }
+            p.cart-description{
+                font-size: 15px;
+                line-height: 24px;
+                color: #898989;
+                font-family: "Lato";
+                font-weight: 400;
+            }
+        }
+    }
+}
+.text-intro{
+    h1{
+        text-transform: capitalize;
+        position: relative;
+        font-size: 36px;
+        line-height: 28px;
+        color: $primary-black;
+        font-weight: 700;
+        margin-bottom: 50px;
+    }
+    h1:after{
+        background-color: #13a0b2;
+        bottom: -25px;
+        content: '';
+        display: block;
+        height: 3px;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%,0);
+        width: 60px;
+    }
+    p{
+        font-size: 18px;
+        line-height: 28px;
+        color: $darkgrey;
+        font-family: "Lato";
+        margin-bottom: 50px;
+    }
+    
+}
+// end of choose us section
+// start of properties section
+// start of properties section
+.properties{
+    padding: 130px 50px;
+    background: linear-gradient(90deg, $normalgrey 50%, $primary-green 50%);
+    .properties-inner{
+        margin: 0 0 0 auto;
+        max-width: 925px;
+        background-color: $white;
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+        .property-line{
+            display: flex;
+            .property-number{
+                padding: 0 35px;
+                background-color: $primary-green;
+                h1{
+                    background-color: $primary-green;
+                    font-size: 70px;
+                    color: $white;
+                    font-weight: 900;
+                }
+            }
+            .property-text{
+                padding: 20px 0 20px 60px;
+                background-color: $white;
+                h3{
+                    font-size: 24px;
+                    color: $primary-black;
+                    font-weight: 600;
+                    margin-bottom: 15px;
+                }
+                p{
+                    max-width: 380px;
+                    line-height: 24px;
+                    font-size: 15px;
+                    color: $darkgrey;
+                    font-family: "Lato";
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+.n-first{
+    padding-top: 50px !important;
+}
+.t-first{
+    padding-top: 70px !important;
+}
+// .n-last{
+
+// }
+.t-last{
+    padding-bottom: 70px !important;
+}
+// end of properties section
+// start of features section
+.features{
+    background-color: $extralightgrey1;
+    padding: 125px 0 95px;
+    .features-inner{
+        .features-box{
+            border: 1px solid $bordergrey1;
+            padding: 35px 40px;
+            background-color: $extralightgrey2;
+            text-align: center;
+            margin-bottom: 30px;
+            .box-icon{
+                margin-bottom: 25px;
+
+            }
+            .box-text{
+                h3{
+                    font-size: 22px;
+                    color: $primary-black;
+                    font-weight: 600;
+                    margin-bottom: 15px;
+                }
+                p{
+                    font-size: 15px;
+                    line-height: 26px;
+                    color: $darkgrey;
+                    font-family: "Lato";
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+// end of features section
+// start of product content
+.product{
+    padding: 125px 0 100px;
+    background-color: $normalgrey;
+    .product-content{
+        h1,p{
+            color: $white;
+        }
+    }
+    .product-boxes{
+        .product-box{
+            position: relative;
+            max-width: 370px;
+            height: 355px;
+            padding: 60px 0 30px;
+            background-color: $white;
+            text-align: center;
+            margin-bottom: 30px;
+            margin: 15px;
+            img{
+                margin-bottom: 40px;
+            }
+            h3.product-title{
+                font-size: 24px;
+                color: $primary-black;
+                font-weight: 600;
+            }
+            p.product-price{
+                font-size: 36px;
+                color: $primary-green;
+                font-weight: 700;
+            }
+        }
+        .product-box:hover {
+            background-image: url(../img/product-hover.png);
+        }
+        .product-box:hover h3{
+            display: none;
+        }
+        .product-box:hover p{
+            display: none;
+        }
+        .product-box:hover img.product-img{
+            display: none;
+        }
+        .product-box img.product-icon1, img.product-icon2{
+            display: none;
+        }
+        .product-box:hover img.product-icon1{
+            display: block;
+        }
+        .product-box:hover img.product-icon2{
+            display: block;
+        }
+        .product-icon1{
+            position: absolute;
+            top: 165px;
+            left: 125px;
+        }
+        .product-icon2{
+            position: absolute;
+            top: 165px;
+            left: 210px;
+        }
+    }
+}
+// end of product content
+// start of testimonial
+.testimonial{
+    padding: 100px 0;
+    .user-rate{
+        li{
+            display: inline-block;
+        }
+        color: $yellow;
+    }
+}
+.review-box{
+    padding: 35px 30px;
+    text-align: center;
+    border: 1px solid $bordergrey2;
+    margin-bottom: 30px;
+    img{
+        margin-bottom: 20px;
+    }
+    h5{
+        font-size: 18px;
+        line-height: 28px;
+        color: $primary-black;
+        font-weight: 700;
+        margin-bottom: 25px;
+    }
+    h5:after{
+        background-color: $primary-green;
+        top: 150px;
+        content: '';
+        display: block;
+        height: 1px;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%,0);
+        width: 30px;
+    }
+    p{
+        font-size: 15px;
+        line-height: 24px;
+        color: $normalgrey;
+        font-family: "Lato";
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+}
+// end of testimonial
+// start of statistics section
+.statistics{
+    padding: 60px 0;
+    background-color: $primary-green;
+    .statistics-inner{
+            display: flex;
+            justify-content: space-between;
+            .statistic-box{
+                .count{
+                    position: relative;
+                    font-size: 45px;
+                    color: $white;
+                    font-weight: 600;
+                    padding-bottom: 5px;
+                }
+                .count:after{
+                    background-color: $white;
+                    content: '';
+                    bottom: -5px;
+                    display: block;
+                    height: 3px;
+                    left: 19px;
+                    position: absolute;
+                    transform: translate(-50%,0);
+                    width: 40px;
+                }
+                p{
+                    padding-top: 10px;
+                    font-size: 24px;
+                    color: $white;
+                    font-weight: 600;
+                }
+                .count-year{
+                    margin-left: 5px;
+                    font-size: 24px;
+                    color: $white;
+                    font-weight: 400;
+    
+                }
+            }
+        }
+}
+// end of statistics section
+// start of blog section
+.blog{
+    padding: 100px 0;
+    .blog-post{
+        position: relative;
+        margin-bottom: 20px;
+        img{
+        width: 100%;
+        }
+        h3.post-title{
+            font-size: 22px;
+            color: $primary-black;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        p.post-paragraph{
+            font-size: 15px;
+            line-height: 26px;
+            color: $normalgrey;
+            font-family: "Lato";
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+        a.post-btn{
+            font-size: 15px;
+            color: $normalgrey;
+            font-family: "Lato";
+            font-weight: 400;
+            transition: all 0.5s ease-in-out;
+        }
+        a:hover{
+            color: $primary-green;
+        }
+        span{
+            font-size: 12px;
+        }
+    }
+}
+.post-date{
+    position: absolute;
+    left: 40px;
+    top: 1px;
+    p.date{
+        text-align: center;
+        padding: 5px 10px;
+        background-color: $primary-green;
+        font-size: 24px;
+        color: $white;
+        font-family: "Lato";
+        font-weight: 700;
+    }
+    p.month{
+        text-align: center;
+        padding: 5px 10px;
+        background-color: $white;
+        font-size: 16px;
+        color: $primary-green;
+        font-family: "Lato";
+        font-weight: 700;
+        text-align: center;
+    }
+}
+// end of blog section
+// start of contact section
+.contact-form{
+    background-color: $extralightgrey2;
+    padding-top: 130px;
+    .contact-title{
+        h3{
+            position: relative;
+            font-size: 36px;
+            letter-spacing: 1px;
+            color: $primary-black;
+            font-weight: 700;
+            margin-bottom: 45px;
+        }
+            h3:after{
+                background-color: $primary-green;
+                content: '';
+                top: 65px;
+                display: block;
+                height: 3px;
+                left: 5%;
+                position: absolute;
+                transform: translate(-50%,0);
+                width: 50px;
+            }
+        }
+    .contact-inner{
+        padding: 20px;
+        max-width: 460px;
+        input[type=text],[type=email]{
+            width: 100%;
+            margin-bottom: 10px;
+            border: none;
+            height: 30px;
+            padding: 5px;
+            background-color: $extralightgrey2;
+        }
+        label{
+            font-size: 15px;
+            color: $darkgrey;
+            font-family: "Lato";
+            margin-bottom: 10px;
+            background-color: $extralightgrey2;
+        }
+        label[for='select']{
+            padding-bottom: 70px;
+        }
+        select{
+            float: right;
+            border: none;
+            background-color: $extralightgrey2;
+        }
+        textarea{
+            width: 100%;
+            margin-bottom: 10px;
+            border: none;
+            height: 130px;
+            background-color: $extralightgrey2;
+        }
+        .submit-btn{
+            margin-left: 40px;
+            font-size: 18px;
+            color: $primary-green;
+            font-family: "Lato";
+            font-weight: 700;
+            border: none;
+            background-color: none;
+        }
+    }
+    .contact-img{
+        img{
+            width: 100%;
+        }
+    }
+}
+// end of contact section
+// start of company-info
+.company-info{
+    padding: 70px 0 50px;
+    background-color: $darkblue;
+    .company-box{
+        margin-bottom: 25px;
+    }
+    img{
+        margin-bottom: 25px;
+    }
+    p{
+        text-align: center;
+        font-size: 18px;
+        color: $white;
+        font-family: "Lato";
+        font-weight: 400;
+    }
+}
+// end of company-info
+// start of footer
+.footer{
+    padding: 65px 0;
+    .social-links{
+        margin-bottom: 15px;
+        ul,li{
+            display: inline-block;
+        }
+        a.social-btn{
+            margin: 0 15px;
+            color: $primary-black;
+        }
+        svg{
+            transition: all 0.5s ease-in-out;
+        }
+        .social-btn:hover svg{
+            transform: translateY(-10px);
+        }
+    }
+    .page-copyright{
+        font-size: 16px;
+        line-height: 24px;
+        color: $primary-black;
+        font-family: "Lato";
+        font-weight: 400;
+        text-align: center;
+        span{
+            color: $primary-green;
+            font-weight: 600;
+        }
+    }
+}
+// end of footer
+
+// style of search php page
+.search-global{
+    padding: 100px;
+}
+.search-another{
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+// end of style php
+// Start of media query
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+    //CSS
+    
+  }
+  
+  /* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    
+    //CSS
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .nav-topmenu, .nav-shopbag{
+        display: none;
+    }
+    
+    .choose-cart{
+        padding: 15px 50px;
+    }
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+    .nav-topmenu, .nav-shopbag{
+        display: none;
+    }
+    .choose-cart{
+        padding: 15px 30px;
+    }
+  }
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    //   Start of main-intro
+    .nav-topmenu, .nav-shopbag{
+        display: none;
+    }
+    .main-intro{
+      .main-inner{
+        h1.main-text{
+          font-size: 40px !important;
+      }
+      p.main-description{
+          font-size: 18px !important;
+      }
+      }
+    }
+    .main-btn{
+        margin: 0 auto;
+        a.contact-btn{
+            padding: 10px 25px !important;
+            font-size: 16px;
+        }
+        a.read-btn{
+            padding: 10px 25px !important;
+            font-size: 16px;
+        }
+    }
+    // end of main-intro
+
+    .text-intro{
+        h1{
+            font-size: 30px !important;
+        }
+        p{
+            font-size: 15px !important;
+        }
+    }
+    // start of choose us
+        .choose-cart{
+            padding: 15px 30px;
+        }
+    // end of choose us
+    .statistics{
+        .statistics-inner{
+            .statistic-box{
+                .count{
+                    font-size: 30px !important;
+                }
+                .count-year{
+                    font-size: 16px !important;
+                }
+                p{
+                    font-size: 16px !important;;
+                }
+            }
+        }
+    } 
+}
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    .nav-topmenu, .nav-shopbag{
+        display: none;
+    }
+        
+  }
+
+// End of media query
+
+.custom-print {
+    color: greenyellow;
+    background: #000;
+    width: 100%;
+}
